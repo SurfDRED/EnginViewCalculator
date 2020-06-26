@@ -1,0 +1,677 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relative"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    android:background="@android:color/background_dark"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        style="@style/Toolbar"
+        android:layout_width="match_parent"
+        android:elevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/calculator_tolbar"
+        app:subtitle="@string/SubTitle"
+        app:subtitleTextAppearance="@style/Toolbar.SubTitle"
+        app:title="@string/Title"
+        app:titleTextAppearance="@style/Toolbar.TitleText" />
+
+    <LinearLayout
+        android:id="@+id/BaseLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/my_toolbar"
+        android:layout_marginTop="0dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtDisplay"
+            style="@style/Text"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:textAlignment="textEnd"
+            android:textColor="@color/colorText"
+            android:textSize="80sp" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/FrameCalc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/BaseLine">
+
+        <LinearLayout
+            android:id="@+id/WorkLineCalc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:baselineAligned="false"
+            android:orientation="vertical"
+            android:visibility="visible"
+            android:weightSum="70">
+
+            <LinearLayout
+                android:id="@+id/WorkCalc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:baselineAligned="true"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/LeftCalcBlock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@android:color/background_dark"
+                    android:baselineAligned="true"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/LeftCalcBlockOne"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:orientation="horizontal">
+
+                        <include
+                            android:id="@+id/btnCalcClear"
+                            layout="@layout/btn_style_grey"
+                            android:text="@string/btnTextCalcClear" />
+
+                        <include
+                            android:id="@+id/btnCalcPm"
+                            layout="@layout/btn_style_grey"
+                            android:text="@string/btnTextCalcPm" />
+
+                        <include
+                            android:id="@+id/btnCalcPercent"
+                            layout="@layout/btn_style_grey"
+                            android:text="@string/btnTextCalcPercent" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/LeftCalcBlockTwo"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:orientation="horizontal">
+
+                        <include
+                            android:id="@+id/btnCalcSeven"
+                            layout="@layout/btn_style_grey"
+                            android:text="@string/btnTextCalcSeven" />
+
+                        <include
+                            android:id="@+id/btnCalcEight"
+                            layout="@layout/btn_style_grey"
+                            android:text="@string/btnTextCalcEight" />
+
+                        <include
+                            android:id="@+id/btnCalcNine"
+                            layout="@layout/btn_style_grey"
+                            android:text="@string/btnTextCalcNine" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/LeftCalcBlockThree"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:orientation="horizontal">
+
+                        <include
+                            android:id="@+id/btnCalcFour"
+                            layout="@layout/btn_style_grey"
+                            android:text="@string/btnTextCalcFour" />
+
+                        <include
+                            android:id="@+id/btnCalcFive"
+                            layout="@layout/btn_style_grey"
+                            android:text="@string/btnTextCalcFive" />
+
+                        <include
+                            android:id="@+id/btnCalcSix"
+                            layout="@layout/btn_style_grey"
+                            android:text="@string/btnTextCalcSix" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/LeftCalcBlockFour"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:orientation="horizontal">
+
+                        <include
+                            android:id="@+id/btnCalcOne"
+                            layout="@layout/btn_style_grey"
+                            android:text="@string/btnTextCalcOne" />
+
+                        <include
+                            android:id="@+id/btnCalcTwo"
+                            layout="@layout/btn_style_grey"
+                            android:text="@string/btnTextCalcTwo" />
+
+                        <include
+                            android:id="@+id/btnCalcThree"
+                            layout="@layout/btn_style_grey"
+                            android:text="@string/btnTextCalcThree" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/LeftCalcBlockFive"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:orientation="horizontal">
+
+                        <include
+                            android:id="@+id/btnCalcZero"
+                            layout="@layout/btn_style_grey"
+                            android:text="@string/btnTextCalcZero" />
+
+                        <include
+                            android:id="@+id/btnCalcPoint"
+                            layout="@layout/btn_style_grey_weight"
+                            android:text="@string/btnTextCalcPoint" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/RightCalcBlock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@android:color/background_dark"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/RightCalcBlockOne"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <include
+                            android:id="@+id/btnCalcShare"
+                            layout="@layout/btn_style_orange"
+                            android:text="@string/btnTextCalcShare" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/RightCalcBlockTwo"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <include
+                            android:id="@+id/btnCalcMultiply"
+                            layout="@layout/btn_style_orange"
+                            android:text="@string/btnTextCalcMultiply" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/RightCalcBlockThree"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <include
+                            android:id="@+id/btnCalcMinus"
+                            layout="@layout/btn_style_orange"
+                            android:text="@string/btnTextCalcMinus" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/RightCalcBlockFour"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <include
+                            android:id="@+id/btnCalcPlus"
+                            layout="@layout/btn_style_orange"
+                            android:text="@string/btnTextCalcPlus" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/RightCalcBlockFive"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <include
+                            android:id="@+id/btnCalcEqually"
+                            layout="@layout/btn_style_orange"
+                            android:text="@string/btnTextCalcEqually" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/WorkLineEng"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:baselineAligned="false"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/WorkEng"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:baselineAligned="true"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/LeftEng"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    tools:visibility="visible">
+
+                    <LinearLayout
+                        android:id="@+id/LeftEngOne"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <include
+                            android:id="@+id/btnEngDegreeTwo"
+                            layout="@layout/btn_style_dark_grey"
+                            android:text="@string/btnTextEngDegreeTwo" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/LeftEngTwo"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <include
+                            android:id="@+id/btnEngDegreeThree"
+                            layout="@layout/btn_style_dark_grey"
+                            android:text="@string/btnTextEngDegreeThree" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/LeftEngThree"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <include
+                            android:id="@+id/btnEngCos"
+                            layout="@layout/btn_style_dark_grey"
+                            android:text="@string/btnTextEngCos" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/LeftEngFour"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <include
+                            android:id="@+id/btnEngSin"
+                            layout="@layout/btn_style_dark_grey"
+                            android:text="@string/btnTextEngSin" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/LeftEngFive"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <include
+                            android:id="@+id/btnEngTan"
+                            layout="@layout/btn_style_dark_grey"
+                            android:text="@string/btnTextEngTan" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/LeftEngSix"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <include
+                            android:id="@+id/btnEngCot"
+                            layout="@layout/btn_style_dark_grey"
+                            android:text="@string/btnTextEngCot" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/LeftEngSeven"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <include
+                            android:id="@+id/btnEngSec"
+                            layout="@layout/btn_style_dark_grey"
+                            android:text="@string/btnTextEngSec" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/LeftEngBlock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@android:color/background_dark"
+                    android:baselineAligned="true"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/LeftEngBlockOne"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:orientation="horizontal">
+
+                        <include
+                            android:id="@+id/btnEngModule"
+                            layout="@layout/btn_style_dark_grey"
+                            android:text="@string/btnTextEngModule" />
+
+                        <include
+                            android:id="@+id/btnEngExp"
+                            layout="@layout/btn_style_dark_grey"
+                            android:text="@string/btnTextEngExp" />
+
+                        <include
+                            android:id="@+id/btnEngMod"
+                            layout="@layout/btn_style_dark_grey"
+                            android:text="@string/btnTextEngMod" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/LeftEngBlockTwo"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:orientation="horizontal">
+
+                        <include
+                            android:id="@+id/btnEngBracketLeft"
+                            layout="@layout/btn_style_dark_grey"
+                            android:text="@string/btnTextEngBracketLeft" />
+
+                        <include
+                            android:id="@+id/btnEngBracketRight"
+                            layout="@layout/btn_style_dark_grey"
+                            android:text="@string/btnTextEngBracketRight" />
+
+                        <include
+                            android:id="@+id/btnEngLn"
+                            layout="@layout/btn_style_dark_grey"
+                            android:text="@string/btnTextEngLn" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/LeftEngBlockThree"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:orientation="horizontal">
+
+                        <include
+                            android:id="@+id/btnEngClear"
+                            layout="@layout/btn_style_grey"
+                            android:text="@string/btnTextEngClear" />
+
+                        <include
+                            android:id="@+id/btnEngPm"
+                            layout="@layout/btn_style_grey"
+                            android:text="@string/btnTextEngPm" />
+
+                        <include
+                            android:id="@+id/btnEngPercent"
+                            layout="@layout/btn_style_grey"
+                            android:text="@string/btnTextEngPercent" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/LeftEngBlockFour"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:orientation="horizontal">
+
+                        <include
+                            android:id="@+id/btnEngSeven"
+                            layout="@layout/btn_style_grey"
+                            android:text="@string/btnTextEngSeven" />
+
+                        <include
+                            android:id="@+id/btnEngEight"
+                            layout="@layout/btn_style_grey"
+                            android:text="@string/btnTextEngEight" />
+
+                        <include
+                            android:id="@+id/btnEngNine"
+                            layout="@layout/btn_style_grey"
+                            android:text="@string/btnTextEngNine" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/LeftEngBlockFive"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:orientation="horizontal">
+
+                        <include
+                            android:id="@+id/btnEngFour"
+                            layout="@layout/btn_style_grey"
+                            android:text="@string/btnTextEngFour" />
+
+                        <include
+                            android:id="@+id/btnEngFive"
+                            layout="@layout/btn_style_grey"
+                            android:text="@string/btnTextEngFive" />
+
+                        <include
+                            android:id="@+id/btnEngSix"
+                            layout="@layout/btn_style_grey"
+                            android:text="@string/btnTextEngSix" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/LeftEngBlockSix"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:orientation="horizontal">
+
+                        <include
+                            android:id="@+id/btnEngOne"
+                            layout="@layout/btn_style_grey"
+                            android:text="@string/btnTextEngOne" />
+
+                        <include
+                            android:id="@+id/btnEngTwo"
+                            layout="@layout/btn_style_grey"
+                            android:text="@string/btnTextEngTwo" />
+
+                        <include
+                            android:id="@+id/btnEngThree"
+                            layout="@layout/btn_style_grey"
+                            android:text="@string/btnTextEngThree" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/LeftEngBlockSeven"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:orientation="horizontal">
+
+                        <include
+                            android:id="@+id/btnEngZero"
+                            layout="@layout/btn_style_grey"
+                            android:text="@string/btnTextEngZero" />
+
+                        <include
+                            android:id="@+id/btnEngPoint"
+                            layout="@layout/btn_style_grey_weight"
+                            android:text="@string/btnTextEngPoint" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/RightEngBlock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@android:color/background_dark"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/RightEngBlockOne"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <include
+                            android:id="@+id/btnEngFactorial"
+                            layout="@layout/btn_style_dark_grey"
+                            android:text="@string/btnTextEngFactorial" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/RightEngBlockTwo"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <include
+                            android:id="@+id/btnEngLog"
+                            layout="@layout/btn_style_dark_grey"
+                            android:text="@string/btnTextEngLog" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/RightEngBlockThree"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <include
+                            android:id="@+id/btnEngShare"
+                            layout="@layout/btn_style_orange"
+                            android:text="@string/btnTextCalcShare" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/RightEngBlockFour"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <include
+                            android:id="@+id/btnEngMultiply"
+                            layout="@layout/btn_style_orange"
+                            android:text="@string/btnTextCalcMultiply" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/RightEngBlockFive"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <include
+                            android:id="@+id/btnEngMinus"
+                            layout="@layout/btn_style_orange"
+                            android:text="@string/btnTextCalcMinus" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/RightEngBlockSix"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <include
+                            android:id="@+id/btnEngPlus"
+                            layout="@layout/btn_style_orange"
+                            android:text="@string/btnTextCalcPlus" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/RightEngBlockSeven"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <include
+                            android:id="@+id/btnEngEqually"
+                            layout="@layout/btn_style_orange"
+                            android:text="@string/btnTextCalcEqually" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </FrameLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,66 @@
+<resources>
+    <string name="app_name">Инженерный вид калькулятора</string>
+    <string name="Title">Инженерный вид калькулятора</string>
+    <string name="SubTitle">Ячменцев Д. Н.</string>
+    <string name="btnTextCalc">Инж</string>
+    <!-- Блок обычный калькулятор-->
+    <string name="btnTextCalcClear">C</string>
+    <string name="btnTextCalcPm">+/-</string>
+    <string name="btnTextCalcPercent">%</string>
+    <string name="btnTextCalcSeven">7</string>
+    <string name="btnTextCalcEight">8</string>
+    <string name="btnTextCalcNine">9</string>
+    <string name="btnTextCalcFour">4</string>
+    <string name="btnTextCalcFive">5</string>
+    <string name="btnTextCalcSix">6</string>
+    <string name="btnTextCalcOne">1</string>
+    <string name="btnTextCalcTwo">2</string>
+    <string name="btnTextCalcThree">3</string>
+    <string name="btnTextCalcZero">0</string>
+    <string name="btnTextCalcPoint">.</string>
+    <string name="btnTextCalcShare">÷</string>
+    <string name="btnTextCalcMultiply">X</string>
+    <string name="btnTextCalcMinus">-</string>
+    <string name="btnTextCalcPlus">+</string>
+    <string name="btnTextCalcEqually">=</string>
+    <!-- Блок инженерный калькулятор-->
+    <string name="btnTextEngClear">C</string>
+    <string name="btnTextEngPm">+/-</string>
+    <string name="btnTextEngPercent">%</string>
+    <string name="btnTextEngSeven">7</string>
+    <string name="btnTextEngEight">8</string>
+    <string name="btnTextEngNine">9</string>
+    <string name="btnTextEngFour">4</string>
+    <string name="btnTextEngFive">5</string>
+    <string name="btnTextEngSix">6</string>
+    <string name="btnTextEngOne">1</string>
+    <string name="btnTextEngTwo">2</string>
+    <string name="btnTextEngThree">3</string>
+    <string name="btnTextEngZero">0</string>
+    <string name="btnTextEngPoint">.</string>
+    <string name="btnTextEngShare">÷</string>
+    <string name="btnTextEngMultiply">X</string>
+    <string name="btnTextEngMinus">-</string>
+    <string name="btnTextEngPlus">+</string>
+    <string name="btnTextEngEqually">=</string>
+    <!-- Блок верхний инженерный калькулятор-->
+    <string name="btnTextEngDegreeTwo">x²</string>
+    <string name="btnTextEngModule">|x|</string>
+    <string name="btnTextEngExp">exp</string>
+    <string name="btnTextEngMod">mod</string>
+    <string name="btnTextEngFactorial">n!</string>
+    <string name="btnTextEngDegreeThree">x³</string>
+    <string name="btnTextEngBracketLeft">(</string>
+    <string name="btnTextEngBracketRight">)</string>
+    <string name="btnTextEngLn">ln</string>
+    <string name="btnTextEngLog">log</string>
+    <!-- Блок левый инженерный калькулятор-->
+    <string name="btnTextEngCos">cos</string>
+    <string name="btnTextEngSin">sin</string>
+    <string name="btnTextEngTan">tan</string>
+    <string name="btnTextEngCot">cot</string>
+    <string name="btnTextEngSec">sec</string>
+    <!-- Блок меню-->
+    <string name="mnCalc">Обычный калькулятор</string>
+    <string name="mnEng">Инженерный калькулятор</string>
+</resources>
